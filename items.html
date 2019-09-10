@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>items_page</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css"><link rel="stylesheet" href="css/owl.theme.default.css"><link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="items_page">
+
+    <header class="header_navbar">
+            <div class="navbar_fixed">
+        <div class="navbar_cloud">
+            <img src="images/navBar/cloud_2.png" alt="雲朵">
+        </div>
+    
+        <div class="navbar_container">
+            <input type="checkbox" name="navbar_buttom-check" id="navbar_buttom-check">
+            <label class="navbar_burger" for="navbar_buttom-check"><span></span></label>
+            <a href="index.html"><img id="logo" src="images/navBar/logo.svg" alt="logo"></a>
+            <nav class="navbar_container_list">
+                <ul>
+                    <li><a href="gameplay.html">遊玩設施</a></li>
+                    <li><a href="team.html">做伙揪團</a></li>
+                    <li><a href="ticket.html">線上購票</a></li>
+                    <li><a href="items.html">周邊商品</a></li>
+                    <li><a href="activity.html">活動專區</a></li>
+                    <li><a href="information.html">園區資訊</a></li>
+                </ul>
+                <img class="phone_cloud" src="images/navBar/phonecloud.png" alt="雲朵">
+            </nav>
+
+            <div class="navbar_icons navbar_icons-table">
+                <a href="shoppingCart.html"><img class="navbar_memicon" src="images/navBar/shopcar.png" alt="購物車"></a>
+                <a href="member.html"><img class="navbar_memicon" src="images/navBar/member.png" alt="會員"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_space"></div>
+    </header>
+
+    <section class="container_mb">
+        <div class="page_title">周邊商品</div>
+        <div class="all_product center">
+            <aside id="filter" class="filter">
+                <div class="filter_content fi_dr_sh">
+                    <form class="filter_inside" onsubmit="return returnR(this)">
+                        <div class="header_clear">
+                            <span class="filter_word dis_ib pad10">篩選器</span>
+                        </div>
+                        <ul class="dis_f_w">
+                            <li class="filter_price filter_sort dis_ib pad_5_0_10 w_lg_100">
+                                <span class="dis_ib pad_5_0_10">價格(0~1500元)</span>
+                                <div class="range_wrap">
+                                    <div id="range" class="range">
+                                        <div id="range_stretch" class="range_stretch"
+                                            style="width:130px;margin-left: 0px"></div>
+                                        <button id="circle_button1" class="circle_button circle_button1"
+                                            style="margin-left: 120px"></button>
+                                        <button id="circle_button2" class="circle_button circle_button2"></button>
+                                        <input id="circle_input1" class="circle_input1 selectors" type="number" min="0"
+                                            max="1500" /> ~
+                                        <input id="circle_input2" class="circle_input2 selectors" type="number" min="0"
+                                            max="1500" /> 元
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="filter_lists filter_sort w_lg_30">
+                                <span>包包</span>
+                                <div class="category">
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="red_bag_class" type="checkbox"
+                                            id="red_bag" name="red_bag" />
+                                        <span>紅色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="blue_bag_class" type="checkbox"
+                                            id="blue_bag" name="blue_bag" />
+                                        <span>藍色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="green_bag_class"
+                                            type="checkbox" id="green_bag" name="green_bag" />
+                                        <span>綠色</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="filter_lists filter_sort w_lg_30">
+                                <span>衣服</span>
+                                <div class="category">
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="red_bag_class" type="checkbox"
+                                            id="red_bag" name="red_bag" />
+                                        <span>紅色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="blue_bag_class" type="checkbox"
+                                            id="blue_bag" name="blue_bag" />
+                                        <span>藍色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="green_bag_class"
+                                            type="checkbox" id="green_bag" name="green_bag" />
+                                        <span>綠色</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="filter_lists filter_sort w_lg_30">
+                                <span>馬克杯</span>
+                                <div class="category">
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" ｚvalue="red_bag_class" type="checkbox"
+                                            id="red_bag" name="red_bag" />
+                                        <span>紅色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="blue_bag_class" type="checkbox"
+                                            id="blue_bag" name="blue_bag" />
+                                        <span>藍色</span>
+                                    </label>
+                                    <br />
+                                    <label class="filter_sort_item dis_ib">
+                                        <input class="select_checkbox pad_5_0_10" value="green_bag_class"
+                                            type="checkbox" id="green_bag" name="green_bag" />
+                                        <span>綠色</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </aside>
+            <div class="all_sort_same">
+                <div class="order_by_search">
+                    <button id="phone_select_button" class="btn phone_select_button dis_lg_n">篩選器</button>
+                    <!-- <div class="order_by"> -->
+                    <!-- <span>排列順序:</span> -->
+                    <!-- <select name="" class="select_dropdown">
+                                    <option value="最新商品">最新商品</option>
+                                    <option value="熱門排行">熱門排行</option>
+                                </select> -->
+                    <!-- </div> -->
+                    <!-- <div class="search">
+                                <input type="text" placeholder="輸入你想搜尋的商品" />
+                                <button><i class="fas fa-search"></i></button>
+                            </div> -->
+                </div>
+                <!-- <div class="sort_same owl-carousel owl-theme" style="padding-top: 350px;"> -->
+                <div class="shop-tab-inner">
+                    <div class="col-2 col-xl-1 ta-r v-xl-hide">
+                        <img src="images/product/arrow_left.png" alt="" class="prev po-r w-40 pointer">
+                    </div>
+                    <!-- <div class="sort_same pt350 owl-carousel owl-theme"> -->
+                    <div class="sort_same owl-carousel owl-theme">
+                        <div class=" card_bg card_bg1 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_cactus.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <a href="item.html"><img src="images/product/product_small/pd_s-01.jpg"></a>
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg1 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_cactus.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-02.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg1 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_cactus.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-03.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-xl-1 v-xl-hide">
+                        <img src="images/product/arrow_right.png" alt="" class="next po-r w-40 pointer">
+                    </div>
+                </div>
+
+                <div class="shop-tab-inner">
+                    <div class="col-2 col-xl-1 ta-r v-xl-hide">
+                        <img src="images/product/arrow_left.png" alt="" class="prev po-r w-40 pointer">
+                    </div>
+                    <div class="sort_same owl-carousel owl-theme owl-theme">
+                        <div class=" card_bg card_bg2 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_dinosaur.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-10.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌衣服</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg2 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_dinosaur.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-11.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌衣服</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg2 fi_dr_sh hoverObj hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_dinosaur.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-12.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌衣服</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-xl-1 v-xl-hide">
+                        <img src="images/product/arrow_right.png" alt="" class="next po-r w-40 pointer">
+                    </div>
+                </div>
+
+                <div class="shop-tab-inner">
+                    <div class="col-2 col-xl-1 ta-r v-xl-hide">
+                        <img src="images/product/arrow_left.png" alt="" class="prev po-r w-40 pointer">
+                    </div>
+                    <div class="sort_same owl-carousel owl-theme owl-theme">
+                        <div class=" card_bg card_bg3 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_eagle.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-13.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌馬克杯</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg3 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_eagle.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-14.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌馬克杯</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg3 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_eagle.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-16.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌馬克杯</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-xl-1 v-xl-hide">
+                        <img src="images/product/arrow_right.png" alt="" class="next po-r w-40 pointer">
+                    </div>
+                </div>
+
+                <div class="shop-tab-inner">
+                    <div class="col-2 col-xl-1 ta-r v-xl-hide">
+                        <img src="images/product/arrow_left.png" alt="" class="prev po-r w-40 pointer">
+                    </div>    
+                    <div class="sort_same owl-carousel owl-theme owl-theme">
+                        <div class=" card_bg card_bg4 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_horse.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-16.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg4 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_horse.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-16.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                        <div class=" card_bg card_bg4 fi_dr_sh hoverObj">
+                            <div class="hoverObj_img dis_n">
+                                <img src="images/product/hoverObj_horse.png" >
+                            </div>
+                            <div class="gray_linear_gradient center">
+                                <div class="sort_same_item_img center">
+                                    <img src="images/product/product_small/pd_s-16.jpg">
+                                </div>
+                                <p class="sort_same_item_title text_align_c">仙人掌包包</p>
+                                <p class="sort_same_item_price text_align_c">NT.450</p>
+                                <div class="btn m-b m-a">加入購物車</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-xl-1 v-xl-hide">
+                        <img src="images/product/arrow_right.png" alt="" class="next po-r w-40 pointer">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section_robot">
+    <div class="robot_text">
+        <div id="dialogBox">
+            >> 您好，我的朋友! 有心事嗎 ?<BR />
+        </div>
+        <div>
+            請輸入問題：
+            <input id="say" name="say" type="text" value="" size="70" onkeydown="keyin(event)" />
+            <!-- 按 enter 時呼叫 keyin() 回答 -->
+            <input type="submit" value="送出" onclick="say()" /> <!-- 當送出按鈕按下，就呼叫 say() 函數回答 -->
+        </div>
+    </div>
+    <img class="robot_img" src="images/robot/robot.png" alt="">
+</section>
+<section class="problem">
+    <div class="problem_container">
+        <div class="problem_text">
+            <p id="puzzle">一加一等於多少？？</p>
+        </div>
+        <div id="problem_answer1" class="problem_answer">
+            <img src="images/problem/question2/1.png">
+        </div>
+        <div id="problem_answer2" class="problem_answer">
+            <img src="images/problem/question2/2.png">
+        </div>
+        <div id="problem_answer3" class="problem_answer">
+            <img src="images/problem/question2/3.png">
+        </div>
+        <div class="problem_reply">
+            <img src="images/problem/ok.png">
+        </div>
+    </div>
+</section>
+
+    <script src="js/robot.js"></script><script src="js/question.js"></script>
+
+<script type="text/javascript">
+</script>
+    <footer class="section_footer">
+    <div class="footer_social">
+        <img src="images/footer/twitter.png" alt="推特">
+        <img src="images/footer/facebook.png" alt="臉書">
+        <img src="images/footer/instagram.png" alt="instagram">
+    </div>
+    <p class="footer_copyright">
+            Copyright &copy; 2019 West Land Inc. 
+    </p>
+</footer>
+    <!-- ====================================== -->
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/6a6d2775fc.js"></script><script src="js/jquery.min.js"></script><script src="js/owl.carousel.js"></script>
+    <!-- <script>
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 0,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3,
+                }
+            }
+        })
+    </script> -->
+
+    <script>
+        $('.owl-carousel').each(function () {
+            $(this).owlCarousel({
+                loop: false,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 3,
+                    }
+                },
+            });
+            $(this).siblings().find('.next').click(function () {
+                $(this).parent().siblings('.owl-carousel').trigger('next.owl.carousel');
+            });
+            $(this).siblings().find('.prev').click(function () {
+                $(this).parent().siblings('.owl-carousel').trigger('prev.owl.carousel');
+            });
+        });
+
+    </script>
+
+    <!-- ====================================== -->
+    <script>
+        // selector start
+
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, null)[attr];
+        }
+
+
+        window.addEventListener("load", function () {
+            var phone_select_button = document.getElementById("phone_select_button");
+            var filter = document.getElementById("filter");
+            var product_list = document.getElementById("product_list");
+
+            phone_select_button.onclick = function () {
+
+                if (document.body.clientWidth < 768) {
+
+                    if (getStyle(filter, "display") == "block") {
+                        filter.style.display = "none";
+                        product_list.style.paddingTop = "50px";
+
+                    } else {
+                        filter.style.display = "block";
+                        product_list.style.paddingTop = "850px";
+                    }
+                }
+
+                if (document.body.clientWidth >= 768 && document.body.clientWidth < 992) {
+                    if (getStyle(filter, "display") == "block") {
+                        filter.style.display = "none";
+                        product_list.style.paddingTop = "50px";
+                    } else {
+                        filter.style.display = "block";
+                        product_list.style.paddingTop = "600px";
+                    }
+                }
+
+            }
+
+        });
+    </script>
+    <!-- ==================================== -->
+    <!-- <script>
+            var bot=85;
+            function showHoverObj() {
+
+                var card = document.querySelectorAll('.hoverObj');
+                console.log(card);
+                for (var i = 0; i < card.length; i++) {
+                    card[i].onmouseenter = function () {
+                        console.log(1);
+                        let grandpa = this.parentNode.parentNode.parentNode.parentNode;
+                        let fa = this.parentNode.parentNode.parentNode;
+                        if (grandpa.firstElementChild.className.indexOf("hoverObj_cactus") > -1 && grandpa.firstElementChild.nextElementSibling.className.indexOf("hoverObj_cactus") > -1) {
+                            return false;
+                        } else {
+                            console.log(grandpa);
+                            var theLeft = this.getBoundingClientRect().left;
+                            var theWidth = window.getComputedStyle(this.parentNode, null).getPropertyValue("width");
+                            var theGrandpaLeft = grandpa.getBoundingClientRect().left;
+    
+                            hoverObjImg = document.createElement("img");
+                            hoverObjImg.src = "../images/product/hoverObj_cactus.png";
+    
+                            hoverObjDiv = document.createElement("div");
+                            hoverObjDiv.style.width = "80px";
+                            hoverObjDiv.style.position = "absolute";
+                            hoverObjDiv.className = "hoverObj_cactus";
+                            hoverObjDiv.style.left = (parseInt(theLeft) - parseInt(theGrandpaLeft) + parseInt(theWidth) / 5 - parseInt(hoverObjDiv.style.width) / 3) + "px";
+                            hoverObjDiv.style.bottom = bot + "%";
+    
+                            hoverObjDiv.appendChild(hoverObjImg);
+                            grandpa.insertBefore(hoverObjDiv, fa);
+    
+                            function monAniUp() {
+    
+                                if (bot < 93) {
+                                    bot += 1.5;
+                                    hoverObjDiv.style.bottom = bot + "%";
+                                    setTimeout(monAniUp, 1);
+                                } else {
+                                    clearTimeout(theTimer);
+                                    hoverObjDiv.className += " bounceMon";
+                                }
+    
+                            }
+                            theTimer = setTimeout(monAniUp, 5);
+                        }
+                    };
+    
+                    card[i].onmouseleave = function () {
+                        theNode = this.parentNode.parentNode.parentNode.parentNode.firstElementChild;
+                        console.log(theNode);
+                        function monAniDown() {
+    
+                            if (bot > 85) {
+                                bot -= 1;
+                                theNode.style.bottom = bot + "%";
+                                setTimeout(monAniDown, 3);
+                            } else {
+                                clearTimeout(theTimer2);
+                                if (theNode.className.indexOf("hoverObj_cactus") > -1) {
+                                    theNode.parentNode.removeChild(theNode);
+                                }
+    
+                            }
+                        }
+                        theTimer2 = setTimeout(monAniDown, 5);
+                    };
+    
+                }
+            }
+            window.addEventListener('load',function(){
+                showHoverObj();
+            },false);
+        </script> -->
+</body>
+
+</html>

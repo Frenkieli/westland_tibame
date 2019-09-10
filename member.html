@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>member</title>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body class="member_page">
+    <header class="header_navbar">
+            <div class="navbar_fixed">
+        <div class="navbar_cloud">
+            <img src="images/navBar/cloud_2.png" alt="雲朵">
+        </div>
+    
+        <div class="navbar_container">
+            <input type="checkbox" name="navbar_buttom-check" id="navbar_buttom-check">
+            <label class="navbar_burger" for="navbar_buttom-check"><span></span></label>
+            <a href="index.html"><img id="logo" src="images/navBar/logo.svg" alt="logo"></a>
+            <nav class="navbar_container_list">
+                <ul>
+                    <li><a href="gameplay.html">遊玩設施</a></li>
+                    <li><a href="team.html">做伙揪團</a></li>
+                    <li><a href="ticket.html">線上購票</a></li>
+                    <li><a href="items.html">周邊商品</a></li>
+                    <li><a href="activity.html">活動專區</a></li>
+                    <li><a href="information.html">園區資訊</a></li>
+                </ul>
+                <img class="phone_cloud" src="images/navBar/phonecloud.png" alt="雲朵">
+            </nav>
+
+            <div class="navbar_icons navbar_icons-table">
+                <a href="shoppingCart.html"><img class="navbar_memicon" src="images/navBar/shopcar.png" alt="購物車"></a>
+                <a href="member.html"><img class="navbar_memicon" src="images/navBar/member.png" alt="會員"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_space"></div>
+    </header>
+    <!-- -----------------會員登入------------------------ -->
+    <section id="lightBox">
+        <div id="loginTable">
+            <!-- 背景 -->
+            <!-- <img class="login_bg" src="pic/navBar/phonecloud.png" alt="登入的背景"> -->
+            <!-- 會員登入文字區域 -->
+            <div class="login_box">
+                <!-- 刪除按鈕 -->
+                <a href="#" class="login_cancel">
+                 <img src="images/member/login_camcel.png" alt="刪除鈕小icon">
+                </a>
+                <!-- 文字區     -->
+                <h3>會員登入</h3>
+                <!-- 帳號: -->
+                <input type="text" name="mem_id" id="mem_id" placeholder="帳號">
+                <br>
+                <!-- 密碼 -->
+                <input type="password" name="mem_psw" id="mem_psw" placeholder="密碼">
+                <br>
+                <!-- 忘記密碼 -->
+                <a href="#" class="login_forget" id="login_forget">忘記密碼</a>
+                <br>
+                <!-- 登入按鈕 -->
+                <a href="memberLocation.html" class="btn" id="login_button">登入</a>
+                <!-- 立即註冊 -->
+                <div class="smalltext">
+                    <span>還不是會員?</span>
+                    <a href="#" id="register">立即註冊</a>
+                    <br>
+                </div>
+                <!-- 快速註冊 -->
+                <div class="fasttext">
+                    <a href="#" id="register_fast">快速註冊</a>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!---------------- ---會員註冊------------------------- -->
+
+    <section id="register_lightbox" >
+        <div class="registerTable">
+            <!-- 背景 -->
+            <!-- <img class="login_bg" src="" alt="註冊的背景"> -->
+            <!-- 會員註冊文字區 -->
+            <div class="register_box">
+                <!-- 刪除按鈕 -->
+                <a href="#" class="login_cancel">
+                    <img src="images/member/login_camcel.png" alt="刪除鈕小icon">
+                </a>
+                <!-- 文字區 -->
+                <h3>會員註冊</h3>
+                <!-- 帳號 -->
+                <span>帳號</span>
+                <input type="text" name="mem_id" id="register_memid" placeholder="請輸入帳號">
+                <br>
+                <!-- Email -->
+                <span>信箱</span>
+                <input type="email" name="mem_email" id="register_mememail" placeholder="輸入E-mail">
+                <br>
+                <!-- 密碼 -->
+                <span>密碼</span>
+                <input type="password" name="mem_psw" id="register_mempsw">
+                <br>
+                <!-- 確認密碼 -->
+                <span>確認密碼</span>
+                <input type="password" name="mem_psw" id="con_register_mempsw">
+                <br>
+                <!-- 提示密碼 -->
+                <span>提示問題</span>
+                <select name="optionarea" id="password_question">
+                    　<option value="question">您最喜歡的遊樂設施</option>
+                    　<option value="question"></option>
+                </select>
+                <br>
+                <!-- 回答問題 -->
+                <span>回答問題</span>
+                <input type="text" name="password_answer" id="password_answer">
+                <br>
+                <!-- 註冊按鈕 -->
+                <a href="#" class="btn" id="register_button">註冊</a> 　
+
+            </div>
+        </div>
+    </section>
+    <!-- ------------- ---------重設密碼------------------------ -->
+    <section id="password_lightbox">
+        <div class="passwordTable">
+            <!-- 背景 -->
+            <!-- <img class="login_bg" src="" alt="密碼的背景"> -->
+            <!-- 重設密碼文字區 -->
+            <div class="password_box">
+                <!-- 刪除按鈕 -->
+                <a href="#" class="login_cancel">
+                    <img src="images/member/login_camcel.png" alt="刪除鈕小icon">
+                </a>
+                <!-- 文字區 -->
+                <h3>重設密碼</h3>
+                <!-- 提示密碼 -->
+                <span>提示問題</span> 
+                <select name="optionarea" id="password_question">
+                    　<option value="question">您最喜歡的遊樂設施</option>
+                    　<option value="question"></option>
+                </select>
+                <br>          
+                <!-- 回答問題 -->
+                <span>回答問題</span>
+                <input type="text" name="password_answer" id="password_answer">
+                <br>
+                <!-- 新密碼 -->
+                <span>密碼</span>
+                <input type="password" name="new_mempsw" id="new_mempsw" placeholder="請輸入新密碼">
+                <br>
+                <!-- 確認密碼 -->
+                <span>確認密碼</span>
+                <input type="password" name="mem_psw" id="re_mempsw" placeholder="再次確認">
+                <br>
+                <!-- 重新設定密碼按鈕 -->
+                <a href="#" class="btn" id="password_button">確認</a> 　
+            </div>
+        </div>
+    </section>
+  
+    
+ 
+</body>
+
+</html>

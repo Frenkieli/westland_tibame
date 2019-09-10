@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/memberCenter.css"> -->
+
+</head>
+
+<body class="memberLocation_page">
+    <header class="header_navbar">
+            <div class="navbar_fixed">
+        <div class="navbar_cloud">
+            <img src="images/navBar/cloud_2.png" alt="雲朵">
+        </div>
+    
+        <div class="navbar_container">
+            <input type="checkbox" name="navbar_buttom-check" id="navbar_buttom-check">
+            <label class="navbar_burger" for="navbar_buttom-check"><span></span></label>
+            <a href="index.html"><img id="logo" src="images/navBar/logo.svg" alt="logo"></a>
+            <nav class="navbar_container_list">
+                <ul>
+                    <li><a href="gameplay.html">遊玩設施</a></li>
+                    <li><a href="team.html">做伙揪團</a></li>
+                    <li><a href="ticket.html">線上購票</a></li>
+                    <li><a href="items.html">周邊商品</a></li>
+                    <li><a href="activity.html">活動專區</a></li>
+                    <li><a href="information.html">園區資訊</a></li>
+                </ul>
+                <img class="phone_cloud" src="images/navBar/phonecloud.png" alt="雲朵">
+            </nav>
+
+            <div class="navbar_icons navbar_icons-table">
+                <a href="shoppingCart.html"><img class="navbar_memicon" src="images/navBar/shopcar.png" alt="購物車"></a>
+                <a href="member.html"><img class="navbar_memicon" src="images/navBar/member.png" alt="會員"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_space"></div>
+    </header>
+   <!-- ------會員中心部分------ -->
+   <section class="account">
+    <div class="infowrap">
+        <!-- ----------------選單部分--------------- -->
+        <div class="menulist tab-demo">
+            <!-- 選單部分 -->
+            <ul class="mymenu tab-title">
+                <li>
+                    <a href="#tab01"id="default_open" >我的資料</a>
+                </li>
+                <li>
+                    <a href="#tab02"id="default_open" >訂單紀錄</a>
+                </li>
+                <li>
+                    <a href="#tab03"id="default_open" >組隊紀錄</a>
+                </li>
+                <li>
+                    <a href="#tab04"id="default_open" >購票紀錄</a>
+                </li>
+                <li>
+                    <a href="#tab05"id="default_open" >評分與留言紀錄</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"id="default_open" class="tablink">登出</a>
+                </li>   
+            </ul>   
+        </div>
+        <!-- -------------個人資訊部分--------------- -->
+        <div class="info_content tab-inner" id="tab01">
+                <!-- 文字檔案部分 -->
+            <form id="content_form ">
+                <!-- 個人資料區 -->
+                <h3>我的資料</h3>
+                    <!-- 帳號 -->
+                    <div class="content_item">
+                        <span>帳號</span>
+                        <span class="memid">56789</span>
+                    </div>
+                    <!-- 姓名 -->
+                    <div class="content_item">
+                        <span>姓名</span>
+                        <input type="text" id="mem_name" placeholder="請輸入名字">
+                    </div>
+                    <!-- 信箱 -->
+                    <div class="content_item">
+                        <span>信箱</span>
+                        <input type="email" id="mem_email" placeholder="1111@11.com">
+                    </div>
+                    <!-- 電話 -->
+                    <div class="content_item">
+                        <span>電話</span>
+                        <input type="tel" id="mem_phone" placeholder="請輸入電話">
+                    </div>
+                    <!-- 生日-->
+                    <div class="content_item">
+                        <span>生日</span>
+                        <input type="text" id="mem_birth">
+                    </div>
+                    <!-- 信用卡區  -->
+                    <h3>我的信用卡</h3>
+                    <div class="content_item">
+                        <span>信用卡</span>
+                        <input type="text" id="mem_credit" value="0000-0000-0000-0000">
+                    </div>
+                    <!-- 購物金區  -->
+                    <h3>我的購物金</h3>
+                    <div class="content_item">
+                        <span>購物金</span>
+                        <span class="memdoller">600</span>
+                    </div>
+                    <!-- 修改資料按鈕 -->
+                    <div class="content_item but_item">
+                        <a class="btn dit_button" id="dit_button">修改資料</a>
+                    </div>
+            </form>
+        </div>
+        <!-- -----------------訂單部分 ----------------->
+        <div id="tab02"class="order_content tab-inner" style="display: none" >
+            <div class="order_list" id="order_list">
+                <h3>我的訂單</h3>
+                <div class="order_item">
+                    <table>
+                        <tr>
+                            <td>訂單日期</td>
+                            <td>訂單編號</td>
+                            <td>訂單狀況</td>
+                            <td>訂單金額</td>
+                        </tr>
+                        <tr>
+                            <td>2019/08/23</td>
+                            <td>no123</td>
+                            <td>出貨中</td>
+                            <td>$2100</td>
+                        </tr>
+                    </table>
+                </div>
+             </div>
+        </div>
+            <!-- ---------購票部分 -------------------->
+        <div id="tab04"class="ticket_content tab-inner"style="display: none" >
+            <div class="ticket_list" id="ticket_list">
+                <h3>我的門票</h3>
+                <div class="ticket_item">
+                    <table>
+                        <tr>
+                            <td>購票日期</td>
+                            <td>門票編號</td>
+                            <td>門票狀況</td>
+                            <td>門票金額</td>
+                        </tr>
+                        <tr>
+                            <td>2019/08/23</td>
+                            <td>no123</td>
+                            <td>已使用</td>
+                            <td>$600</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ---------組隊部分 ----(暫定)---------------->
+        <div id="tab03"class="team_content tab-inner" style="display: none">
+                <div class="team_list" id="team_list">
+                    <h3>歷史紀錄</h3>
+                    <div class="team_item">
+                        <table>
+                            <tr>
+                                <td>隊伍編號</td>
+                                <td>隊伍名稱</td>
+                                <td>隊伍人數</td>
+                                <td>隊伍懸賞金</td>
+                            </tr>
+                            <tr>
+                                <td>125555</td>
+                                <td>小虎隊</td>
+                                <td>5</td>
+                                <td>$60000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        <!-- -------------評分/留言部分 ----------------->
+        <div id="tab05"class="evaluation_content tab-inner" style="display: none">
+            <div class="evaluation_list" id="evaluation_list">
+                <h3>我的評分</h3>
+                <div class="score_box">
+                        <!-- 第一則評分 -->
+                    <div class="score_item">
+                        <div class="equ_historypic">
+                            <span>海盜船</span>
+                            <!-- <img src="pic/member/equ01.png" alt="設施照片"> -->
+                        </div>
+                        <div class="equ_score">
+                            <span>評分</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                </div>
+                <h3>我的留言</h3>
+                <div class="message_box">
+                        <!-- 第ㄧ則留言 -->
+                        <div class="message_item">
+                            <div class="message_pot">
+                                <div class="equ_historypic">
+                                        <!-- <img src="" alt="設施照片"> -->
+                                    <span>設施</span>
+                                    <span>雲霄飛車</span>
+                                </div>
+                                <div class="equ_message">
+                                    <p>約朋友一起去好久沒去的遊樂園，但好笑的是我和我的朋友們其實都不太敢坐那種超可怕的遊樂設施哈哈哈哈</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </div> 
+</section>
+    <!-- <script src="js/memberTab.js"></script> -->
+    <footer class="section_footer">
+    <div class="footer_social">
+        <img src="images/footer/twitter.png" alt="推特">
+        <img src="images/footer/facebook.png" alt="臉書">
+        <img src="images/footer/instagram.png" alt="instagram">
+    </div>
+    <p class="footer_copyright">
+            Copyright &copy; 2019 West Land Inc. 
+    </p>
+</footer>
+
+    <!-- js -->
+     <script src="js/jquery-1.11.0.min.js"></script>  
+     <script>
+     // <!------ tab open page ----->
+
+    $(function(){
+        var $li = $('ul.tab-title li');
+            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+        
+            $li.click(function(){
+                $($(this).find('a'). attr ('href')).show().siblings ('.tab-inner').hide();
+                $(this).addClass('active'). siblings ('.active').removeClass('active');
+            });
+        });
+// <!------ tab open page ----->
+     
+     </script>
+    
+</body>
+
+</html>

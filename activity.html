@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 測試 -->
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/day.css">
+
+</head>
+
+<body class="activity_page">
+    <header class="header_navbar">
+            <div class="navbar_fixed">
+        <div class="navbar_cloud">
+            <img src="images/navBar/cloud_2.png" alt="雲朵">
+        </div>
+    
+        <div class="navbar_container">
+            <input type="checkbox" name="navbar_buttom-check" id="navbar_buttom-check">
+            <label class="navbar_burger" for="navbar_buttom-check"><span></span></label>
+            <a href="index.html"><img id="logo" src="images/navBar/logo.svg" alt="logo"></a>
+            <nav class="navbar_container_list">
+                <ul>
+                    <li><a href="gameplay.html">遊玩設施</a></li>
+                    <li><a href="team.html">做伙揪團</a></li>
+                    <li><a href="ticket.html">線上購票</a></li>
+                    <li><a href="items.html">周邊商品</a></li>
+                    <li><a href="activity.html">活動專區</a></li>
+                    <li><a href="information.html">園區資訊</a></li>
+                </ul>
+                <img class="phone_cloud" src="images/navBar/phonecloud.png" alt="雲朵">
+            </nav>
+
+            <div class="navbar_icons navbar_icons-table">
+                <a href="shoppingCart.html"><img class="navbar_memicon" src="images/navBar/shopcar.png" alt="購物車"></a>
+                <a href="member.html"><img class="navbar_memicon" src="images/navBar/member.png" alt="會員"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_space"></div>
+    </header>
+
+
+    <section class="activity_section">
+        <!-- --------月曆的------ -->
+        <!-- 標題:木板 -->
+        <div class="wood_title page_title">
+            活動專區
+        </div>
+        <!-- 標題:頁面 -->
+        <div class="calendar_title section_title">
+            月曆查詢
+        </div>
+        <!-- 月曆開始 -->
+        <div class="wrapper">
+            <div class="calendar_wood">
+                <div id="calendari"></div>
+            </div>
+
+        </div>
+        <script src="js/day.js"></script>
+
+        <!-- 月曆結束 -->
+
+    </section>
+
+
+    <!-- ------活動公告-------- -->
+    <section class="activitypages">
+
+        <div class="activity_title section_title">活動公告</div>
+        <div class="newswrap">
+            <!-- 篩選器 -->
+            <div class="selectpart">
+                <div class="select_group">
+                    <div class="select_frame">
+                        <h3>篩選條件:</h3>
+                        <div class="noshow filter-active">
+                            <button type="button" class="select_btn" id="all">All</button>
+                        </div>
+                        <div class="noshow">
+                            <button type="button" class="select_btn" id="newgroup">活動資訊</button>
+                        </div>
+                        <div class="noshow">
+                            <button type="button" class="select_btn" id="park">一般資訊</button>
+                        </div>
+
+                        <!-- 手機的篩選器 -->
+                        <div class="select_phone">
+                            <select>
+                                <option>All</option>
+                                <option>活動資訊</option>
+                                <option>一般資訊</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- 篩選結束 -->
+            <!-- 活動內容 -->
+            <div class="activity_frame">
+                <div class="activity_content">
+                    <div class="activity_part">
+                        <div class="activity_pic">
+                            <img src="images/member/pic01.jpg" alt="活動照片">
+                        </div>
+                        <div class="activity_text">
+                            <h4 class="paragraph_title">活動資訊</h4>
+                            <hr>
+                            <p class="paragraph_p">2019/09/09</p>
+                            <p class="paragraph_p">
+                                今年暑假推出「夾一下！酷夏繽紛糖果節」還有全台最大真人版的夾娃娃機、用氣味表演的鼻子劇場、糖果裝置藝術體驗全新VR新視界、5D體感影院、多項親子闖關活動、乘坐雪圈極速凍感等
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity_content">
+                    <div class="activity_part">
+                        <div class="activity_pic">
+                            <img src="images/member/pic01.jpg" alt="活動照片">
+                        </div>
+                        <div class="activity_text">
+                            <h4 class="paragraph_title">一般資訊</h4>
+                            <hr>
+                            <p class="paragraph_p">2019/09/09</p>
+                            <p class="paragraph_p">
+                                放假正愁不知道帶小孩去哪裡玩嗎？WESTLAND樂園在9/22～9/24推出連假專屬，只要購買全票，即贈價值350元的花博會門票1張，讓你樂園玩完再去逛花博，假期不無聊！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_robot">
+    <div class="robot_text">
+        <div id="dialogBox">
+            >> 您好，我的朋友! 有心事嗎 ?<BR />
+        </div>
+        <div>
+            請輸入問題：
+            <input id="say" name="say" type="text" value="" size="70" onkeydown="keyin(event)" />
+            <!-- 按 enter 時呼叫 keyin() 回答 -->
+            <input type="submit" value="送出" onclick="say()" /> <!-- 當送出按鈕按下，就呼叫 say() 函數回答 -->
+        </div>
+    </div>
+    <img class="robot_img" src="images/robot/robot.png" alt="">
+</section>
+<section class="problem">
+    <div class="problem_container">
+        <div class="problem_text">
+            <p id="puzzle">一加一等於多少？？</p>
+        </div>
+        <div id="problem_answer1" class="problem_answer">
+            <img src="images/problem/question2/1.png">
+        </div>
+        <div id="problem_answer2" class="problem_answer">
+            <img src="images/problem/question2/2.png">
+        </div>
+        <div id="problem_answer3" class="problem_answer">
+            <img src="images/problem/question2/3.png">
+        </div>
+        <div class="problem_reply">
+            <img src="images/problem/ok.png">
+        </div>
+    </div>
+</section>
+
+    <script src="js/robot.js"></script><script src="js/question.js"></script>
+
+<script type="text/javascript">
+</script>
+    <footer class="section_footer">
+    <div class="footer_social">
+        <img src="images/footer/twitter.png" alt="推特">
+        <img src="images/footer/facebook.png" alt="臉書">
+        <img src="images/footer/instagram.png" alt="instagram">
+    </div>
+    <p class="footer_copyright">
+            Copyright &copy; 2019 West Land Inc. 
+    </p>
+</footer>
+
+    <!-- js -->
+    <script src="js/canlendar.js"></script>
+</body>
+
+</html>

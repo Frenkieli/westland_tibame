@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="gameplay_page">
+    <header class="header_navbar">
+            <div class="navbar_fixed">
+        <div class="navbar_cloud">
+            <img src="images/navBar/cloud_2.png" alt="雲朵">
+        </div>
+    
+        <div class="navbar_container">
+            <input type="checkbox" name="navbar_buttom-check" id="navbar_buttom-check">
+            <label class="navbar_burger" for="navbar_buttom-check"><span></span></label>
+            <a href="index.html"><img id="logo" src="images/navBar/logo.svg" alt="logo"></a>
+            <nav class="navbar_container_list">
+                <ul>
+                    <li><a href="gameplay.html">遊玩設施</a></li>
+                    <li><a href="team.html">做伙揪團</a></li>
+                    <li><a href="ticket.html">線上購票</a></li>
+                    <li><a href="items.html">周邊商品</a></li>
+                    <li><a href="activity.html">活動專區</a></li>
+                    <li><a href="information.html">園區資訊</a></li>
+                </ul>
+                <img class="phone_cloud" src="images/navBar/phonecloud.png" alt="雲朵">
+            </nav>
+
+            <div class="navbar_icons navbar_icons-table">
+                <a href="shoppingCart.html"><img class="navbar_memicon" src="images/navBar/shopcar.png" alt="購物車"></a>
+                <a href="member.html"><img class="navbar_memicon" src="images/navBar/member.png" alt="會員"></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav_space"></div>
+    </header>
+    <section class="section_robot">
+    <div class="robot_text">
+        <div id="dialogBox">
+            >> 您好，我的朋友! 有心事嗎 ?<BR />
+        </div>
+        <div>
+            請輸入問題：
+            <input id="say" name="say" type="text" value="" size="70" onkeydown="keyin(event)" />
+            <!-- 按 enter 時呼叫 keyin() 回答 -->
+            <input type="submit" value="送出" onclick="say()" /> <!-- 當送出按鈕按下，就呼叫 say() 函數回答 -->
+        </div>
+    </div>
+    <img class="robot_img" src="images/robot/robot.png" alt="">
+</section>
+<section class="problem">
+    <div class="problem_container">
+        <div class="problem_text">
+            <p id="puzzle">一加一等於多少？？</p>
+        </div>
+        <div id="problem_answer1" class="problem_answer">
+            <img src="images/problem/question2/1.png">
+        </div>
+        <div id="problem_answer2" class="problem_answer">
+            <img src="images/problem/question2/2.png">
+        </div>
+        <div id="problem_answer3" class="problem_answer">
+            <img src="images/problem/question2/3.png">
+        </div>
+        <div class="problem_reply">
+            <img src="images/problem/ok.png">
+        </div>
+    </div>
+</section>
+
+    <script src="js/robot.js"></script><script src="js/question.js"></script>
+
+<script type="text/javascript">
+</script>
+    <h2 class="page_title play_title">遊玩設施</h2>
+    <section class="section_playticket">
+        <h3 class="playticket_title">
+            <p> 您的客製門票</p>
+        </h3>
+        <div class="playticket_ticket">
+            <div class="ticket_name">
+                <p>匿名人士</p>
+            </div>
+            <div class="ticket_img"><img src="https://picsum.photos/400/300/?random=1"></div>
+            <div class="ticket_team">
+                <p> 某某隊</p>
+            </div>
+            <div class="ticket_reward">
+                <p> $123456789</p>
+            </div>
+            <img class="ticket_mascot" src="images/robot/robot.png" alt="">
+        </div>
+        <div class="playticket_buttom">
+            <div class="buttom_box">
+                <div class="buttom_style buttom_entrance">掃描入口QRcode</div>
+                <div class="buttom_style buttom_reward">兌換獎品QRcode</div>
+            </div>
+            <div class="buttom_box">
+                <div class="buttom_style buttom_facility">設施掃描QRcode</div>
+                <div class="buttom_style buttom_export">掃描出口QRcode</div>
+            </div>
+        </div>
+    </section>
+    <section class="section_camera">
+        <video id="preview"></video>
+    </section>
+
+    <section class="section_demo">
+        <div class="map_container">
+            <img class="small_map" src="images/gameplay/Jiugongge.svg" alt="小地圖">
+            <img class="point" src="images/gameplay/point.svg" alt="所在位置">
+        </div>
+        <div class="demo_container">
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">商店</div>
+                        <p id="QRcode0"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-store.svg"> -->
+                    <p><img class="demo_img" src="images/gameplay/store.svg">這裡是兌換獎品的地方，來看看您贏得多少寶藏吧!</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">滑水道</div>
+                        <p id="QRcode1"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-waterSlide.svg"> -->
+                    <p><img id="waterSlide" class="demo_img" src="images/gameplay/waterSlide.svg">兩條採用露天與密閉混和設計的滑水道，全國首創的府衝玩法。在明暗變化全國首創的輔衝玩法中，手握飛毯，頭下腳上有如阿拉丁控制魔毯的飛行一般。</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">旋轉椅</div>
+                        <p id="QRcode2"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-swivelChair.svg"> -->
+                    <p><img class="demo_img" id="swivelChair" src="images/gameplay/swivelChair.svg">坐上高達18層樓加上360度大旋轉明星遊樂設施，心理的忐忑在醞釀翻轉，天旋地轉啟動後，才是尖叫聲此起彼落無限延續的開端！</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">海盜船</div>
+                        <p id="QRcode3"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-pirateShip.svg"> -->
+                    <p><img class="demo_img" id="pirateShip" src="images/gameplay/pirateShip.svg">傳統的海盜船遊戲最多只作一百八十度的擺動，新的海盜船擺動時，位於「船首」及「船尾」的因為擺幅最大，速度最高，所受的拉力最大，因此亦是最刺激的。</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">入口</div>
+                        <p id="QRcode4"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-entrance.svg"> -->
+                    <img class="demo_img" src="images/gameplay/entrance.svg">
+                    <h4>歡迎您的蒞臨!!</h4>
+                    <p>進入本園區，您可以盡情享受逛園區的樂趣，請往右或左，或往上下移動，遊玩設施並掃QRcode，然後到我們兌換商店(左上角)兌換獎品喔，祝您遊玩愉快!!</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">雲霄飛車</div>
+                        <p id="QRcode5"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-rollerCoaster.svg"> -->
+                    <p><img class="demo_img" id="rollerCoaster" src="images/gameplay/rollerCoaster.svg">擁有全世界最長的雲霄飛車，全長1.5公里，將近12層樓的垂直俯衝，驚險又刺激，是全世界最高最快的雲霄飛車，也因此「扭曲的巨人」特別受到矚目。</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">旋轉木馬</div>
+                        <p id="QRcode6"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-carousel.svg"> -->
+                    <p><img class="demo_img" id="Carousel" src="images/gameplay/Carousel.svg">在一個旋轉的平台上有座位供遊客乘坐，這些座位傳統上都會裝飾成木馬，並且會上下移動，也會裝飾成汽車飛機或者其它卡通動物形象的座位。</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">摩天輪</div>
+                        <p id="QRcode7"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-ferrisWheel.svg"> -->
+                    <p><img class="demo_img" id="ferrisWheel" src="images/gameplay/ferrisWheel.svg">維也納摩天輪是現存唯一建於19世紀的摩天輪，至今仍在營運。維也納摩天輪於1897年為弗朗茨·約瑟夫一世的金禧慶典而興建在奧地利維也納利奧波德城普拉特遊樂場，總高64.75米。</p>
+                </div>
+            </div>
+            <div class="demo_facility">
+                <div class="demo_scan">
+                    <div class="demo_scaninner">
+                        <div class="section_title">出口</div>
+                        <p id="QRcode8"></p>
+                        <div class="btn">掃描</div>
+                    </div>
+                </div>
+                <div class="demo_text">  
+                    <!-- <img class="demo_imgBG" src="images/gameplay/bg-out.svg"> -->
+                    <p><img class="demo_img" class="out" src="images/gameplay/out.svg">離開的時候再掃QRcode吧，讓我們知道您確實離開本園了，感謝您的蒞臨!</p>
+                </div>
+            </div>
+        </div>
+        <div class="demo_arrow demo_toparrow"><p>向上走</p><img src="images/arrow/top.png" alt=""></div>
+        <div class="demo_arrow demo_leftarrow"><p>向左走</p><img src="images/arrow/top.png" alt=""></div>
+        <div class="demo_arrow demo_rightarrow"><p>向右走</p><img src="images/arrow/top.png" alt=""></div>
+        <div class="demo_arrow demo_bottom"><p>向下走</p><img src="images/arrow/top.png" alt=""></div>
+    </section>
+
+    <section class="section_mission">
+        <h3 class="mission_title">經典任務進度</h3>
+        <div class="mission_progress">
+            <div class="progress_check"></div>
+            <div class="progress_box">某某設施</div>
+        </div>
+        <div class="mission_progress">
+            <div class="progress_check"></div>
+            <div class="progress_box">某某設施</div>
+        </div>
+        <div class="mission_progress">
+            <div class="progress_check"></div>
+            <div class="progress_box">某某設施</div>
+        </div>
+        <div class="mission_progress">
+            <div class="progress_check"></div>
+            <div class="progress_box">某某設施</div>
+        </div>
+        <div class="progress_box_Complete">完成任務</div>
+    </section>
+    <section class="section_robot">
+    <div class="robot_text">
+        <div id="dialogBox">
+            >> 您好，我的朋友! 有心事嗎 ?<BR />
+        </div>
+        <div>
+            請輸入問題：
+            <input id="say" name="say" type="text" value="" size="70" onkeydown="keyin(event)" />
+            <!-- 按 enter 時呼叫 keyin() 回答 -->
+            <input type="submit" value="送出" onclick="say()" /> <!-- 當送出按鈕按下，就呼叫 say() 函數回答 -->
+        </div>
+    </div>
+    <img class="robot_img" src="images/robot/robot.png" alt="">
+</section>
+<section class="problem">
+    <div class="problem_container">
+        <div class="problem_text">
+            <p id="puzzle">一加一等於多少？？</p>
+        </div>
+        <div id="problem_answer1" class="problem_answer">
+            <img src="images/problem/question2/1.png">
+        </div>
+        <div id="problem_answer2" class="problem_answer">
+            <img src="images/problem/question2/2.png">
+        </div>
+        <div id="problem_answer3" class="problem_answer">
+            <img src="images/problem/question2/3.png">
+        </div>
+        <div class="problem_reply">
+            <img src="images/problem/ok.png">
+        </div>
+    </div>
+</section>
+
+    <script src="js/robot.js"></script><script src="js/question.js"></script>
+
+<script type="text/javascript">
+</script>
+    <footer class="section_footer">
+    <div class="footer_social">
+        <img src="images/footer/twitter.png" alt="推特">
+        <img src="images/footer/facebook.png" alt="臉書">
+        <img src="images/footer/instagram.png" alt="instagram">
+    </div>
+    <p class="footer_copyright">
+            Copyright &copy; 2019 West Land Inc. 
+    </p>
+</footer>
+
+
+
+    <!-- js -->
+    <script src="js/instascan.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="js/smallmap.js"></script><script src="js/QRcode.js"></script><script src="js/jquery-qrcode-0.17.0.min.js"></script>
+</body>
+
+</html>
